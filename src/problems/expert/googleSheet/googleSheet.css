@@ -1,0 +1,15 @@
+.google_sheet_container {
+    width: 90vw;
+    height: 90vh;
+}
+
+.google_sheet_container .table_container {
+    width: 100%;
+}
+
+.table_container .row {
+}
+
+.table_container .row .column {
+    border: 1px solid blue;
+}
