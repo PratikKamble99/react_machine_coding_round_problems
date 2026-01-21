@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 const DebounceApiCall = () => {
     const [products, setProducts] = useState([]);
     const [query, setQuery] = useState("");
-    const timeoutRef = useRef(null);
+    const timeoutRef = useRef<number | null>(null);
 
     useEffect(() => {
         console.log(timeoutRef.current);
@@ -20,9 +20,9 @@ const DebounceApiCall = () => {
             .then((res) => setProducts(res.products));
     }
 
-    function debounce(cb, delay) {
-        let timer;
-        return function (args) {
+    function debounce(cb: (args: any) => void, delay: number) {
+        let timer: number;
+        return function (args: any[]) {
             if (timer) clearTimeout(timer);
             timer = setTimeout(() => {
                 cb(args);
@@ -30,7 +30,7 @@ const DebounceApiCall = () => {
         };
     }
 
-    function handleChange(e) {
+    function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
         console.log(e);
     }
 
