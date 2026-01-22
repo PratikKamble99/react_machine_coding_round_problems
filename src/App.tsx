@@ -6,6 +6,7 @@ import DebounceApiCall from "./problems/intermediate/debounce_api_call/DebounceA
 import Tabs from "./problems/intermediate/tabs_component/Tabs";
 import ToastProvider from "./problems/intermediate/toast_notification/ToastContext";
 import Toast from "./problems/intermediate/toast_notification/Toast";
+import MultiStepForm from "./problems/intermediate/multi_step_form/MultiStepForm";
 
 function App() {
     return (
@@ -15,9 +16,10 @@ function App() {
             {/* <DebounceApiCall /> */}
             {/* <ApiRetry /> */}
             {/* <Tabs /> */}
-            <ToastProvider>
+            {/* <ToastProvider>
                 <Toast />
-            </ToastProvider>
+            </ToastProvider> */}
+            <MultiStepForm />
         </>
     );
 }
